@@ -1,0 +1,7 @@
+*.pdf
+*.docx.pdf
+.ipynb_checkpoints/
+__pycache__/
+/env
+.txt
+.docx

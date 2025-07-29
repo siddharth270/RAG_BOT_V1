@@ -1,0 +1,11 @@
+langchain==0.3.23
+langchain-community==0.3.21
+datasets==3.5.0
+numpy==2.2
+faiss-cpu
+sentence-transformers
+PyPDF2
+streamlit
+ollama
+python-docx
+pdf2image
