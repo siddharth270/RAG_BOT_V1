@@ -32,10 +32,11 @@ def extract_text_from_txt(txt_path):
 def extract_text_from_pdf(pdf_path):
     reader = PdfReader(pdf_path)
     text = ""
+    ocr_text = ""
     for i, page in enumerate(reader.pages):
         page_text = page.extract_text()
         if page_text and page_text.strip():
-            all_text += page_text
+            text += page_text
         else:
             # If no text is found, try OCR on images in the PDF
             images = convert_from_path(pdf_path, first_page=i+1, last_page=i+1)
@@ -58,13 +59,12 @@ def extract_chunks_from_pdfs(uploaded_files):
             f.write(file.getbuffer())
         
         if file_ext == "pdf":
-            reader = PdfReader(file_path)
-            for page_num, page in enumerate(reader.pages):
-                page_text = page.extract_text()
-                if page_text:
-                    chunks = splitter.split_text(page_text)
-                    all_chunks.extend(chunks)
-                    metadata.extend([{'source': file.name, 'page': page_num+1}] * len(chunks))
+            text = extract_text_from_pdf(file_path)
+            # You can further split text by page and apply metadata if needed
+            # [See previous logic in your extractor]
+            chunks = splitter.split_text(text)
+            all_chunks.extend(chunks)
+            metadata.extend([{'source': file.name, 'page': 1}]* len(chunks))
 
         elif file_ext == "docx":
             text = extract_text_from_docx(file_path)
