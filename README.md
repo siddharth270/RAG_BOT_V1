@@ -7,18 +7,20 @@ No paid APIs. All open-source and completely free.
 
 Here’s what powered it:
 
-✅PyPDF2 – to break down and parse the PDF files
+✅PyPDF2 – to break down and parse the PDF files\
+
+✅PyTesseracct - OCR
 
 ✅HuggingFace Transformers – used the sentence-transformers/all-MiniLM-L6-v2 model for chunk-level vector embeddings
 
 ✅FAISS – for blazing-fast similarity search across vectorized content
 
-✅Ollama – to run local LLM inference efficiently
+✅Ollama (Llama 3.2) – to run local LLM inference efficiently
 
 
 # How to run?
 
-Make sure to creat a virtual environment and then download all the dependencies.
+Make sure to create a virtual environment and then download all the dependencies.
 
 ```
 #Install dependecies
