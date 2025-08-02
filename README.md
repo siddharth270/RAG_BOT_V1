@@ -9,7 +9,7 @@ Here’s what powered it:
 
 ✅PyPDF2 – to break down and parse the PDF files\
 
-✅PyTesseracct - OCR
+✅PyTesseract - OCR
 
 ✅HuggingFace Transformers – used the sentence-transformers/all-MiniLM-L6-v2 model for chunk-level vector embeddings
 
