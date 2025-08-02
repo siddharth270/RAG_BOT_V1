@@ -18,6 +18,8 @@ Here’s what powered it:
 
 # How to run?
 
+Make sure to creat a virtual environment and then download all the dependencies.
+
 ```
 #Install dependecies
 pip installl -r requirements.txt
