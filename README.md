@@ -26,11 +26,12 @@ pip installl -r requirements.txt
 ```
 
 ```python
+# for OCR
+brew install tesseract
+```
+
+```python
 # Run from terminal
 streamlit run Rag_chatbot.py
 ```
 
-```python
-# for OCR
-brew install tesseract
-```
